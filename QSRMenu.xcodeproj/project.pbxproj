@@ -100,12 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				383FC4031FF2DB160088DF8B /* AppDelegate.swift */,
-				383FC4051FF2DB160088DF8B /* FirstViewController.swift */,
-				383FC4071FF2DB160088DF8B /* SecondViewController.swift */,
-				383FC4091FF2DB160088DF8B /* Main.storyboard */,
 				383FC40C1FF2DB160088DF8B /* Assets.xcassets */,
-				383FC40E1FF2DB160088DF8B /* LaunchScreen.storyboard */,
+				383FC4051FF2DB160088DF8B /* FirstViewController.swift */,
 				383FC4111FF2DB160088DF8B /* Info.plist */,
+				383FC40E1FF2DB160088DF8B /* LaunchScreen.storyboard */,
+				383FC4091FF2DB160088DF8B /* Main.storyboard */,
+				383FC4071FF2DB160088DF8B /* SecondViewController.swift */,
 			);
 			path = QSRMenu;
 			sourceTree = "<group>";
