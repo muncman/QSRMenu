@@ -19,6 +19,10 @@
 		38AC12931FFAD194006B92C4 /* SideStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC12921FFAD194006B92C4 /* SideStore.swift */; };
 		38AC12951FFAD1A6006B92C4 /* SidesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC12941FFAD1A6006B92C4 /* SidesTableViewController.swift */; };
 		38AC12971FFAD9AA006B92C4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC12961FFAD9AA006B92C4 /* MenuItem.swift */; };
+		38AC12991FFADC1A006B92C4 /* Burgers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AC12981FFADC1A006B92C4 /* Burgers.storyboard */; };
+		38AC129B1FFADC71006B92C4 /* Sides.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38AC129A1FFADC71006B92C4 /* Sides.storyboard */; };
+		38AC129D1FFAE1BC006B92C4 /* BurgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC129C1FFAE1BC006B92C4 /* BurgerViewController.swift */; };
+		38AC129F1FFAE371006B92C4 /* SideOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AC129E1FFAE371006B92C4 /* SideOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		38AC12921FFAD194006B92C4 /* SideStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideStore.swift; sourceTree = "<group>"; };
 		38AC12941FFAD1A6006B92C4 /* SidesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidesTableViewController.swift; sourceTree = "<group>"; };
 		38AC12961FFAD9AA006B92C4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		38AC12981FFADC1A006B92C4 /* Burgers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Burgers.storyboard; sourceTree = "<group>"; };
+		38AC129A1FFADC71006B92C4 /* Sides.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sides.storyboard; sourceTree = "<group>"; };
+		38AC129C1FFAE1BC006B92C4 /* BurgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerViewController.swift; sourceTree = "<group>"; };
+		38AC129E1FFAE371006B92C4 /* SideOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +148,10 @@
 		38AC12811FFACDC4006B92C4 /* Burgers */ = {
 			isa = PBXGroup;
 			children = (
+				38AC12981FFADC1A006B92C4 /* Burgers.storyboard */,
 				38AC12831FFACDEB006B92C4 /* BurgersTableViewController.swift */,
 				38AC128B1FFAD0B6006B92C4 /* BurgerStore.swift */,
+				38AC129C1FFAE1BC006B92C4 /* BurgerViewController.swift */,
 			);
 			path = Burgers;
 			sourceTree = "<group>";
@@ -158,6 +168,8 @@
 		38AC128F1FFAD158006B92C4 /* Sides */ = {
 			isa = PBXGroup;
 			children = (
+				38AC129E1FFAE371006B92C4 /* SideOrderViewController.swift */,
+				38AC129A1FFADC71006B92C4 /* Sides.storyboard */,
 				38AC12941FFAD1A6006B92C4 /* SidesTableViewController.swift */,
 				38AC12921FFAD194006B92C4 /* SideStore.swift */,
 			);
@@ -271,9 +283,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38AC129B1FFADC71006B92C4 /* Sides.storyboard in Resources */,
 				383FC4101FF2DB160088DF8B /* LaunchScreen.storyboard in Resources */,
 				383FC40D1FF2DB160088DF8B /* Assets.xcassets in Resources */,
 				383FC40B1FF2DB160088DF8B /* Main.storyboard in Resources */,
+				38AC12991FFADC1A006B92C4 /* Burgers.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +315,8 @@
 				38AC12951FFAD1A6006B92C4 /* SidesTableViewController.swift in Sources */,
 				38AC12931FFAD194006B92C4 /* SideStore.swift in Sources */,
 				38AC128C1FFAD0B6006B92C4 /* BurgerStore.swift in Sources */,
+				38AC129F1FFAE371006B92C4 /* SideOrderViewController.swift in Sources */,
+				38AC129D1FFAE1BC006B92C4 /* BurgerViewController.swift in Sources */,
 				38AC128A1FFACF01006B92C4 /* MenuItemTableViewCell.swift in Sources */,
 				38AC12971FFAD9AA006B92C4 /* MenuItem.swift in Sources */,
 				38AC12841FFACDEB006B92C4 /* BurgersTableViewController.swift in Sources */,

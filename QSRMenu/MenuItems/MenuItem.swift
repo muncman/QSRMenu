@@ -12,7 +12,16 @@ struct MenuItem {
     
     let name: String
     let blurb: String
-    // TODO: do this? => let ingredients: Array<String>
-    // TODO: add image(s
+    let price: NSDecimalNumber
+    // TODO: add image(s), maybe `ingredients: Array<String>`
+    
+    var formattedPrice: String {
+        get {
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .currency
+            numberFormatter.locale = NSLocale.current
+            return numberFormatter.string(from: price) ?? ""
+        }
+    }
     
 }

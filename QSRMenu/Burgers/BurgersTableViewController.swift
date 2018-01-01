@@ -10,7 +10,7 @@ import UIKit
 
 class BurgersTableViewController: UITableViewController {
     
-    private lazy var menuItems: Array<MenuItem>! = {
+    lazy var menuItems: Array<MenuItem>! = {
         return BurgerStore().persistedItems
     }()
 
@@ -37,15 +37,19 @@ class BurgersTableViewController: UITableViewController {
         cell.detailTextLabel?.text = menuItem.blurb
         return cell
     }
+    
+    // Clear the separator lines after the last row. 
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView(frame: .zero)
+    }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let destinationVC = segue.destination as? BurgerViewController else { return }
+        if let selectedIndexPath = tableView.indexPathForSelectedRow, selectedIndexPath.row < menuItems.count {
+            destinationVC.menuItem = menuItems[selectedIndexPath.row]
+        }
     }
-    */
 
 }

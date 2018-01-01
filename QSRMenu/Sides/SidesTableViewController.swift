@@ -10,7 +10,7 @@ import UIKit
 
 class SidesTableViewController: BurgersTableViewController {
 
-    private lazy var menuItems: Array<MenuItem>! = {
+    override lazy var menuItems: Array<MenuItem>! = {
         return SideStore().persistedItems
     }()
 
