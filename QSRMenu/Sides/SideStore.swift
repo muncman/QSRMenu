@@ -11,10 +11,16 @@ import Foundation
 class SideStore {
     
     let persistedItems = [
-        MenuItem(name: "Small Soda", blurb: "In the 1950s, this was a large", price: NSDecimalNumber(value: 0.79)),
-        MenuItem(name: "Medium Soda", blurb: "Enjoy!", price: NSDecimalNumber(value: 0.89)),
-        MenuItem(name: "Medium Soda", blurb: "A little thirsty, are we?", price: NSDecimalNumber(value: 0.99)),
-        MenuItem(name: "Giant Soda", blurb: "You know you'll finish it...", price: NSDecimalNumber(value: 1.39)),
+        MenuItem(name: "Small Soda", blurb: "In the 1950s, this was a Large.", price: NSDecimalNumber(value: 0.79)),
+        MenuItem(name: "Medium Soda",
+                 blurb: """
+                    Soda. Soda pop. Dispensed by a soda jerk. Pop. Cola.
+                    No Pepsi, Coke? Where's the Royal Crown Cola?
+                    It's all just sugar water in the end. Enjoy!
+                    """,
+                 price: NSDecimalNumber(value: 0.89)),
+        MenuItem(name: "Large Soda", blurb: "A little thirsty, are we?", price: NSDecimalNumber(value: 0.99)),
+        MenuItem(name: "Giant Soda", blurb: "C'mon, you know you'll finish it...", price: NSDecimalNumber(value: 1.39)),
         MenuItem(name: "Water", blurb: "Free & healthy!", price: NSDecimalNumber(value: 0.00)),
         MenuItem(name: "Craft Beer", blurb: "It's beer:thirty somewhere", price: NSDecimalNumber(value: 5.99)),
         MenuItem(name: "Bourbon", blurb: "Why not?", price: NSDecimalNumber(value: 8.99)),

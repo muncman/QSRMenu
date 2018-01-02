@@ -19,7 +19,7 @@ struct MenuItem {
         get {
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .currency
-            numberFormatter.locale = NSLocale.current
+            numberFormatter.locale = NSLocale.current // TODO: inject for testing?
             return numberFormatter.string(from: price) ?? ""
         }
     }

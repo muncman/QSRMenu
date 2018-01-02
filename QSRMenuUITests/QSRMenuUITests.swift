@@ -9,28 +9,40 @@
 import XCTest
 
 class QSRMenuUITests: XCTestCase {
+    
+    let app = XCUIApplication()
         
     override func setUp() {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launchArguments += ["\(self)"]
+        app.launchEnvironment["QSR_XCUI_Testing"] = true.description
+        app.launch()
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSmokeHappyPathSanityCheck() {
+        XCTContext.runActivity(named: "Check launch state") { _ in
+            app.validateAtHomeScreen(test: self)
+            XCTAssertTrue(waitForElementToAppear(app.staticTexts["Small Burger"]))
+        }
+        XCTContext.runActivity(named: "Go to burger detail") { _ in
+            app.staticTexts["Small Burger"].tap()
+            XCTAssertTrue(waitForElementToAppear(app.navigationBars["Burger Zone"]))
+            XCTAssertTrue(waitForElementToAppear(app.staticTexts["Small Burger"]))
+            XCTAssertTrue(waitForElementToAppear(app.staticTexts["$0.99"]))
+            XCTAssertTrue(waitForElementToAppear(app.staticTexts["Bite-sized goodness"]))
+        }
+        XCTContext.runActivity(named: "Go to Side Orders tab") { _ in
+            app.tabBars.buttons["Sides"].tap()
+            XCTAssertTrue(waitForElementToAppear(app.navigationBars["Side Orders"]))
+            XCTAssertTrue(waitForElementToAppear(app.staticTexts["Small Soda"]))
+            app.staticTexts["Small Soda"].tap()
+            XCTAssertTrue(waitForElementToAppear(app.navigationBars["Side Ways"]))
+            XCTAssertTrue(waitForElementToAppear(app.staticTexts["Small Soda"]))
+            XCTAssertTrue(waitForElementToAppear(app.staticTexts["$0.79"]))
+            XCTAssertTrue(waitForElementToAppear(app.staticTexts["In the 1950s, this was a Large."]))
+        }
     }
     
 }
