@@ -10,6 +10,7 @@ import Foundation
 
 class BurgerStore {
     
+    /** Canned data. */
     let persistedItems = [
         MenuItem(name: "Small Burger", blurb: "Bite-sized goodness", price: NSDecimalNumber(value: 0.99)),
         MenuItem(name: "Medium Burger", blurb: "A classic", price: NSDecimalNumber(value: 1.19)),

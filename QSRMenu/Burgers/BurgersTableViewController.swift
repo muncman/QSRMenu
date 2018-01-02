@@ -38,7 +38,7 @@ class BurgersTableViewController: UITableViewController {
         return cell
     }
     
-    // Clear the separator lines after the last row. 
+    /** Clear the separator lines after the last row. */
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView(frame: .zero)
     }

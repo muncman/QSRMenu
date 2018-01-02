@@ -10,6 +10,7 @@ import Foundation
 
 class SideStore {
     
+    /** Canned data. */
     let persistedItems = [
         MenuItem(name: "Small Soda", blurb: "In the 1950s, this was a Large.", price: NSDecimalNumber(value: 0.79)),
         MenuItem(name: "Medium Soda",
