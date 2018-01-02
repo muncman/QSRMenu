@@ -24,19 +24,10 @@ class BurgerViewController: UIViewController {
     // MARK: - Interface methods
     
     private func populateView(item: MenuItem?) {
-        guard let item = item else {
-            resetView()
-            return
-        }
-        name.text = item.name
-        price.text = item.formattedPrice
-        information.text = item.blurb
-    }
-    
-    private func resetView() {
-        name.text = NSLocalizedString("Oops", comment: "empty.item.name")
-        price.text = "$0.00"
-        information.text = NSLocalizedString("Go back and pick something from the menu!", comment: "empty.item.blurb")
+        assert(item != nil, "Dev Error: A MenuItem should always be passed to this instance.")
+        name.text = item!.name
+        price.text = item!.formattedPrice
+        information.text = item!.blurb
     }
 
 }
